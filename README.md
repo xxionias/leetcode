@@ -2,7 +2,7 @@
 
 (ctrl + shift + m to preview .md in Atom)
 
-## 1143:
+## 1143. Longest Common Subsequence
 There are a couple of strategies we use to design a tractable (non-exponential)
 algorithm for an optimization problem.
 
@@ -51,3 +51,10 @@ Working :
 - Next step is to apply the same function to the previously attained result and the number just succeeding the second element and the result is again stored.
 - This process continues till no more elements are left in the container.
 - The final returned result is returned and printed on console.
+
+## 235. Lowest Common Ancestor of a Binary Search Tree
+Lets review properties of a BST:
+
+1. Left subtree of a node N contains nodes whose values are lesser than or equal to node N's value.
+2. Right subtree of a node N contains nodes whose values are greater than node N's value.
+3. Both left and right subtrees are also BSTs.
