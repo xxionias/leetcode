@@ -39,3 +39,10 @@
 -- | 1               |
 -- +-----------------+
 -- 1 is the only number that appears consecutively for at least three times.
+
+SELECT Num as ConsecutiveNums
+FROM (SELECT DISTINCT Num,
+       LAG(Num,1) OVER (ORDER BY Id) as lag1,
+       LAG(Num,2) OVER (ORDER BY Id) as lag2
+FROM Logs) tmp
+WHERE lag1 = num and num = lag2;
